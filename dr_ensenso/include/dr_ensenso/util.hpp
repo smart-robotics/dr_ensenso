@@ -1,7 +1,7 @@
 #pragma once
 #include "error.hpp"
 
-#include <ensenso/nxLib.h>
+#include "nxLib.h"
 
 #include <boost/optional.hpp>
 

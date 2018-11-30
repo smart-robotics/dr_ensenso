@@ -1,6 +1,6 @@
 #pragma once
 #include <Eigen/Dense>
-#include <ensenso/nxLib.h>
+#include "nxLib.h"
 #include <cstdint>
 #include "util.hpp"
 

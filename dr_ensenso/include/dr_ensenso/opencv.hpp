@@ -1,6 +1,6 @@
 #pragma once
 
-#include <ensenso/nxLib.h>
+#include "nxLib.h"
 #include <opencv2/core/core.hpp>
 
 namespace dr {

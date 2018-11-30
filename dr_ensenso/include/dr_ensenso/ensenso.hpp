@@ -7,7 +7,7 @@
 #include <pcl/point_cloud.h>
 #include <pcl/point_types.h>
 
-#include <ensenso/nxLib.h>
+#include "nxLib.h"
 #include <boost/optional.hpp>
 
 namespace dr {

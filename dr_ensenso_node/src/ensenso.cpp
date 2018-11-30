@@ -114,7 +114,7 @@ protected:
 	void configure() {
 		// load ROS parameters
 		param<std::string>("camera_frame", camera_frame, "camera_frame");
-		param<std::string>("camera_data_path", camera_data_path, "camera_data");
+		param<std::string>("camera_data_path", camera_data_path, "/tmp/");
 		param<bool>("publish_cloud", publish_cloud, true);
 		param<bool>("dump_images", dump_images, true);
 		param<bool>("registered", registered, true);
@@ -124,6 +124,10 @@ protected:
 
 		// get Ensenso serial
 		serial = dr::getParam<std::string>(handle(), "serial", "");
+	
+		ROS_INFO_STREAM("Dump images: " << std::string(dump_images == true ? "True" : "False"));
+		ROS_INFO_STREAM("Directory to store data: " << camera_data_path);
+		
 		if (serial != "") {
 			ROS_INFO_STREAM("Opening Ensenso with serial '" << serial << "'...");
 		} else {
@@ -241,6 +245,7 @@ protected:
 		PointCloud::Ptr cloud(new PointCloud);
 		try {
 			if (registered) {
+				ROS_INFO_STREAM("Returning registered point cloud...");
 				ensenso_camera->loadRegisteredPointCloud(*cloud, cv::Rect(), false);
 			} else {
 				ensenso_camera->loadPointCloud(*cloud, cv::Rect(), false);

@@ -1,5 +1,5 @@
 #pragma once
-#include <ensenso/nxLib.h>
+#include "nxLib.h"
 #include <stdexcept>
 
 namespace dr {
