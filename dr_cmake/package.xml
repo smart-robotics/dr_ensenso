@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+	<name>dr_cmake</name>
+	<version>1.0.0</version>
+	<description>Some CMake utilities for DR.</description>
+	<maintainer email="maarten@de-vri.es">Maarten de Vries</maintainer>
+	<author email="maarten@de-vri.es">Maarten de Vries</author>
+	<license>Apache v2.0</license>
+
+	<buildtool_depend>catkin</buildtool_depend>
+
+	<export>
+		<architecture_independent/>
+	</export>
+</package>
